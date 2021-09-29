@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quản trị viên</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="header">
+			<div class="row">
+				<h3 class="col-lg-4">Quản trị viên</h3>
+				<h5 class="col-lg-4">Tên Hãng Xe Khách</h5>
+				<div class="col-lg-4 userzone">
+					<span><span class="glyphicon glyphicon-user"></span>Phan Anh Minh</span>
+					<span>Thoát</span>
+				</div>
+			</div>
+			<hr />
+		</div>
+		<div class="noidung row">
+			<div class="sidebar">
+				<div class="menu">
+					<ul>
+						<li class="option selected" onclick="change(this)">Thống kê</li>
+						<li class="option" onclick="change(this)">Khách hàng</li>
+						<li class="option" onclick="change(this)">Chuyến xe</li>
+						<li class="option" onclick="change(this)">Loại xe</li>
+						<li class="option" onclick="change(this)">Lộ trình</li>
+						<li class="option" onclick="change(this)">Nhân viên</li>
+					</ul>
+				</div>
+			</div>
+			<div class="">
+				<!-- <span>
+					<ul>
+						<li class="option selected" onclick="change(this)">Bản đồ</li>
+						<li class="option" onclick="change(this)">Nhập vé</li>
+					</ul>
+				</span> -->
+				<span><a href="#">Trang chủ</a></span>
+				<div class="content thongke show">
+					<div>
+						<div class="col-lg-4">
+							<div class="the">
+								<a href="">
+									<div>
+										<div class="glyphicon glyphicon-user"></div>
+									</div>
+									&nbsp;
+									&nbsp;
+									&nbsp;
+									<div>
+										<p>Khách hàng</p>
+										<p>Đã đăng ký: <i>1000</i></p>
+										<p>Đang online: <i>100</i></p>
+										<p>Lượng truy cập: <i>100</i></p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="the">
+								<a href="">
+									<div>
+										<div class="glyphicon glyphicon-calendar"></div>
+									</div>
+									&nbsp;
+									&nbsp;
+									&nbsp;
+									<div>
+										<p>Lịch trình</p>
+										<p>Só chuyến xe: <i>1000</i></p>
+										<p>Đã đi: <i>100</i></p>
+										<p>Đang chờ: <i>100</i></p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="the">
+								<a href="">
+									<div>
+										<div class="glyphicon glyphicon-credit-card"></div>
+									</div>
+									&nbsp;
+									&nbsp;
+									&nbsp;
+									<div>
+										<p>Doang thu</p>
+										<p>Theo tháng: <i>1000</i></p>
+										<p>Theo quý: <i>100</i></p>
+										<p>Theo năm: <i>100</i></p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="col-lg-6">
+							<canvas id="bieudo1"></canvas>
+						</div>
+						<div class="col-lg-6">
+							<canvas id="bieudo2"></canvas>
+						</div>
+					</div>
+				</div>
+				<div class="content"></div>
+				<div class="content"></div>
+				<div class="content loaixe">
+					<div class="col-lg-6">
+						<div class="col-lg-12">
+							<span>Loại xe</span>
+							<div>
+							<table>
+								<tr>
+									<th>Mã loại</th>
+									<th>Tên loại</th>
+									<th>Kích thước</th>
+									<th>Số ghế</th>
+									<th>Thao tác</th>
+								</tr>
+								<tr>
+									<td>Mã loại #</td>
+									<td>Tên loại #</td>
+									<td>Kích thước #</td>
+									<td>số ghế</td>
+									<td>
+										<select>
+											<option>Chọn:</option>
+											<option>Sửa</option>
+											<option>Xóa</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>Mã loại #</td>
+									<td>Tên loại #</td>
+									<td>Kích thước #</td>
+									<td>số ghế</td>
+									<td>
+										<select>
+											<option>Chọn:</option>
+											<option>Sửa</option>
+											<option>Xóa</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>Mã loại #</td>
+									<td>Tên loại #</td>
+									<td>Kích thước #</td>
+									<td>số ghế</td>
+									<td>
+										<select>
+											<option>Chọn:</option>
+											<option>Sửa</option>
+											<option>Xóa</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>Mã loại #</td>
+									<td>Tên loại #</td>
+									<td>Kích thước #</td>
+									<td>số ghế</td>
+									<td>
+										<select>
+											<option>Chọn:</option>
+											<option>Sửa</option>
+											<option>Xóa</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>Mã loại #</td>
+									<td>Tên loại #</td>
+									<td>Kích thước #</td>
+									<td>số ghế</td>
+									<td>
+										<select>
+											<option>Chọn:</option>
+											<option>Sửa</option>
+											<option>Xóa</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>Mã loại #</td>
+									<td>Tên loại #</td>
+									<td>Kích thước #</td>
+									<td>số ghế</td>
+									<td>
+										<select>
+											<option>Chọn:</option>
+											<option>Sửa</option>
+											<option>Xóa</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>Mã loại #</td>
+									<td>Tên loại #</td>
+									<td>Kích thước #</td>
+									<td>số ghế</td>
+									<td>
+										<select>
+											<option>Chọn:</option>
+											<option>Sửa</option>
+											<option>Xóa</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>Mã loại #</td>
+									<td>Tên loại #</td>
+									<td>Kích thước #</td>
+									<td>số ghế</td>
+									<td>
+										<select>
+											<option>Chọn:</option>
+											<option>Sửa</option>
+											<option>Xóa</option>
+										</select>
+									</td>
+								</tr>
+							</table>
+							</div>
+						</div>
+						<div class="col-lg-12">
+							<span>Thông tin loại xe</span>
+							<form class="">
+								<input type="text" name="" class="form-control" placeholder="Tên loại xe">
+								<input type="text" name="" class="form-control" placeholder="Số hàng">
+								<input type="text" name="" class="form-control" placeholder="Số cột">
+								<input type="button" name="" class="btn btn-success" value="Áp dụng">
+							</form>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="">
+						<div class="sodoxe">
+							<div>Chỉnh sửa sơ đồ loại xe
+								<hr>
+							</div>
+							<div class="col-lg-12">
+								<div class="row">
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+									<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-6">
+								<span>Xác nhận</span>
+							</div>
+							<div class="col-lg-6">
+								<span>Hoàn tác</span>
+							</div>
+						</div>	
+						</div>
+					</div>
+				</div>
+				<div class="content datve row">
+					<div class="col-lg-4">
+						<div class="searchroute">
+							<span>Tìm chuyến xe</span>
+							<form>
+							<div>
+								<div class="input-group">
+									<span class="input-group-addon">Nơi đi</span>
+									<input type="text" name="noidi" class="form-control" list="diadiem" placeholder="Nơi đi">
+								</div>
+								<br>
+								<div class="input-group">
+									<span class="input-group-addon">Nơi đến</span>
+									<input type="text" name="noiden" class="form-control" list="diadiem" placeholder="Nơi đến">
+								</div>
+								<br>
+								<div class="input-group">
+									<span class="input-group-addon">Ngày đi</span>
+									<input type="date" name="ngaydi" class="form-control">
+								</div>
+								<br>
+								<div class="selecttype">
+									<span>Loại xe</span>
+									<label class="radio-inline"><input type="radio" name="loaighe" value="ghe">Ghế ngồi</label>
+									<label class="radio-inline"><input type="radio" name="loaighe" value="giuong">Giường nằm</label>
+								</div>
+							</div>
+							</form>
+							<span class="glyphicon glyphicon-search"></span>
+						</div>
+						<div class="searchresult">
+							<div class="chuyenxe">
+								<ul>
+									<li>Chuyến xe # <i class="glyphicon glyphicon-ban-circle" style="color: gray;"></i></li>
+									<li>Chuyến xe # <i class="glyphicon glyphicon-ok-circle" style="color: green;"></i></li>
+									<li>Chuyến xe # <i class="glyphicon glyphicon-ok-circle" style="color: green;"></i></li>
+									<li>Chuyến xe # <i class="glyphicon glyphicon-ok-circle" style="color: green;"></i></li>
+									<li>Chuyến xe # <i class="glyphicon glyphicon-ok-circle" style="color: green;"></i></li>
+									<li>Chuyến xe # <i class="glyphicon glyphicon-ok-circle" style="color: green;"></i></li>
+									<li>Chuyến xe # <i class="glyphicon glyphicon-ok-circle" style="color: green;"></i></li>
+									<li>Chuyến xe # <i class="glyphicon glyphicon-ok-circle" style="color: green;"></i></li>
+									<li>Chuyến xe # <i class="glyphicon glyphicon-ok-circle" style="color: green;"></i></li>
+									<li>Chuyến xe # <i class="glyphicon glyphicon-ok-circle" style="color: green;"></i></li>
+									<li>Chuyến xe # <i class="glyphicon glyphicon-ok-circle" style="color: green;"></i></li>
+									<li>Chuyến xe # <i class="glyphicon glyphicon-ok-circle" style="color: green;"></i></li>
+									<li>Chuyến xe # <i class="glyphicon glyphicon-ok-circle" style="color: green;"></i></li>
+									<li>Chuyến xe # <i class="glyphicon glyphicon-ok-circle" style="color: green;"></i></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="ttdatve">
+							<span>Thông tin đặt vé</span>
+							<hr>
+							<form class="form-vertical">
+								<input type="text" name="hoten" class="form-control" placeholder="Họ tên">
+								<br>
+								<input type="text" name="sodienthoai" class="form-control" placeholder="Số điện thoại">
+								<br>
+								<input type="text" name="cmnd" class="form-control" placeholder="CMND">
+								<br>
+								<input type="text" name="noidonkhach" class="form-control" placeholder="Nơi đón khách">
+								<br>
+								<input type="text" name="noidi" class="form-control" list="diadiem" placeholder="Nơi đi">
+								<br>
+								<input type="text" name="noiden" class="form-control" list="diadiem" placeholder="Nơi đến">
+							</form>
+							<span data-toggle="modal" data-target="#modaldadat">Vé đã đặt</span>
+							<br>
+							<span data-toggle="modal" data-target="#modaldatve">Đặt vé</span>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="searchcustomer">
+							<span>Tìm Khách Hàng</span>
+							<form>
+								<div>
+									<input type="text" name="searchkh" class="form-control" placeholder="Search">
+									<span class="glyphicon glyphicon-search"></span>
+								</div>
+							</form>
+							<div class="kqtimkh">
+								<ul>
+									<li>Khách hàng # <span class="glyphicon glyphicon-plus" style="color: gray;"></span></li>
+									<li>Khách hàng # <span class="glyphicon glyphicon-plus" style="color: gray;"></span></li>
+									<li>Khách hàng # <span class="glyphicon glyphicon-plus" style="color: gray;"></span></li>
+									<li>Khách hàng # <span class="glyphicon glyphicon-plus" style="color: gray;"></span></li>
+									<li>Khách hàng # <span class="glyphicon glyphicon-plus" style="color: gray;"></span></li>
+									<li>Khách hàng # <span class="glyphicon glyphicon-plus" style="color: gray;"></span></li>
+									<li>Khách hàng # <span class="glyphicon glyphicon-plus" style="color: gray;"></span></li>
+									<li>Khách hàng # <span class="glyphicon glyphicon-plus" style="color: gray;"></span></li>
+									<li>Khách hàng # <span class="glyphicon glyphicon-plus" style="color: gray;"></span></li>
+									<li>Khách hàng # <span class="glyphicon glyphicon-plus" style="color: gray;"></span></li>
+									<li>Khách hàng # <span class="glyphicon glyphicon-plus" style="color: gray;"></span></li>
+									<li>Khách hàng # <span class="glyphicon glyphicon-plus" style="color: gray;"></span></li>
+									<li>Khách hàng # <span class="glyphicon glyphicon-plus" style="color: gray;"></span></li>
+									<li>Khách hàng # <span class="glyphicon glyphicon-plus" style="color: gray;"></span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="content"></div>
+			</div>
+		</div>
+	</div>
+	<datalist id="diadiem" style="display: none;">
+		<option>Quảng Ngãi</option>
+		<option>Quảng Nam</option>
+		<option>Đà Nẵng</option>
+		<option>Sài Gòn</option>
+		<option>Bình Định</option>
+		<option>Hà Nội</option>
+	</datalist>
+	<div id="modaldatve" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="close" data-dismiss="modal">&times;</button>
+					<div class="modal-title">Chuyến xe #</div>
+				</div>
+				<div class="modal-body">
+					<form id="ttchuyenxe">
+					<div class="row form-group">
+						<div class="col-lg-6">
+							<label>Nơi đi</label>
+							<input type="text" name="noidi" class="form-control" placeholder="Điểm đi" readonly="">
+						</div>
+						<div class="col-lg-6">
+							<label>Nơi đến</label>
+							<input type="text" name="noiden" class="form-control" placeholder="Điểm đến" readonly="">
+						</div>
+					</div>
+					<div class="row form-group">
+						<div class="col-lg-6">
+							<label>Thời gian đi</label>
+							<input type="text" name="thoigiandi" class="form-control" placeholder="Thời gian đi" readonly="">
+						</div>
+						<div class="col-lg-6">
+							<label>Thời gian đến dự kiến</label>
+							<input type="text" name="thoigianden" class="form-control" placeholder="Thời gian đến dự kiến" readonly="">
+						</div>
+					</div>
+					</form>
+					<span>Sơ đồ xe</span>
+					<label class="checkbox-inline"><input type="checkbox" name="multi">Chọn nhiều chỗ</label>
+					<div class="sodoxe">
+						<div class="col-lg-4"></div>
+						<div class="col-lg-4">
+							<div class="row">
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+								<div class="col-lg-3"><div class="glyphicon glyphicon-check"></div></div>
+							</div>
+						</div>
+						<div class="col-lg-4"></div>
+					</div>
+					<br>
+					<span>Chọn</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="modaldadat" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="close" data-dismiss="modal">&times;</button>
+					<div class="modal-title">Vé đặt</div>
+				</div>
+				<div class="modal-body">
+					<ul>
+						<li>Thông tin vé # <span class="glyphicon glyphicon-remove" style="color: red;"></span></li>
+						<li>Thông tin vé # <span class="glyphicon glyphicon-remove" style="color: red;"></span></li>
+						<li>Thông tin vé # <span class="glyphicon glyphicon-remove" style="color: red;"></span></li>
+						<li>Thông tin vé # <span class="glyphicon glyphicon-remove" style="color: red;"></span></li>
+						<li>Thông tin vé # <span class="glyphicon glyphicon-remove" style="color: red;"></span></li>
+						<li>Thông tin vé # <span class="glyphicon glyphicon-remove" style="color: red;"></span></li>
+						<li>Thông tin vé # <span class="glyphicon glyphicon-remove" style="color: red;"></span></li>
+						<li>Thông tin vé # <span class="glyphicon glyphicon-remove" style="color: red;"></span></li>
+						<li>Thông tin vé # <span class="glyphicon glyphicon-remove" style="color: red;"></span></li>
+						<li>Thông tin vé # <span class="glyphicon glyphicon-remove" style="color: red;"></span></li>
+						<li>Thông tin vé # <span class="glyphicon glyphicon-remove" style="color: red;"></span></li>
+						<li>Thông tin vé # <span class="glyphicon glyphicon-remove" style="color: red;"></span></li>
+						<li>Thông tin vé # <span class="glyphicon glyphicon-remove" style="color: red;"></span></li>
+						<li>Thông tin vé # <span class="glyphicon glyphicon-remove" style="color: red;"></span></li>
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<div class="col-lg-12">
+						<label>Tổng tiền</label>
+						<input type="text" name="tongtien" class="form-control" placeholder="Tổng tiền" readonly="">
+					</div>
+					<div class="row">
+						<div class="col-lg-6">
+							<span>Xác nhận</span>
+						</div>
+						<div class="col-lg-6">
+							<span>Hoàn tác</span>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		document.getElementsByClassName("container-fluid")[0].style.paddingTop=document.getElementsByClassName("header")[0].clientHeight+30+"px";
+		document.getElementsByClassName("container-fluid")[0].style.paddingBottom= "15px";
+		document.getElementById("bieudo1").width=document.getElementById("bieudo1").parentNode.clientWidth - 15;
+		document.getElementById("bieudo1").height=document.getElementById("bieudo1").parentNode.clientHeight - 15;
+		document.getElementById("bieudo2").width=document.getElementById("bieudo2").parentNode.clientWidth - 15;
+		document.getElementById("bieudo2").height=document.getElementById("bieudo2").parentNode.clientHeight - 15;
+		// function showMap(){
+		// 	var mapOptions = {
+		// 		center: new google.maps.LatLng(51.2, 46),
+		// 		zoom: 10,
+		// 		mapTypeId: google.maps.MapTypeId.HYBRID
+		// 	};
+		// 	var map = new google.maps.Map(document.getElementsByClassName("bando")[0],mapOptions);
+		// }
+		function change(obj){
+			option = document.getElementsByClassName("option");
+			content = document.getElementsByClassName("content");
+			for (var i = 0; i < option.length; i++) {
+				option[i].classList.remove('selected');
+				content[i].classList.remove('show');
+			}
+			for (var i = 0; i < option.length; i++) {
+				if(option[i]==obj){
+					option[i].classList.add('selected');
+					content[i].classList.add('show');
+				}
+			}
+		}
+		var buyerData = {
+    		labels : ["January","February","March","April","May","June"],
+   			 datasets : [
+       		 {
+            	fillColor : "rgba(172,194,132,0.4)",
+            	strokeColor : "#ACC26D",
+            	pointColor : "#fff",
+            	pointStrokeColor : "#9DB86D",
+            	data : [203,156,99,251,305,247]
+        	}
+    		]
+		}
+   		var bieudo1 = document.getElementById('bieudo1').getContext('2d');
+   		var bieudo2 = document.getElementById('bieudo2').getContext('2d');
+    	new Chart(bieudo1).Line(buyerData);
+    	new Chart(bieudo2).Bar(buyerData);
+	</script>
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPoe4NcaI69_-eBqxW9Of05dHNF0cRJ78&callback=showMap"></script> -->
+</body>
+</html>

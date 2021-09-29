@@ -1,0 +1,482 @@
+* {
+	box-sizing: border-box;
+}
+.container-fluid {
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.header {
+	background: #008cff;
+	color: white;
+	border-radius: 5px;
+	padding: .5em;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: calc(100% - 2em);
+	margin: 0 1em;
+}
+.row > * {
+	display: inline-block;
+	margin: 0;
+}
+.row > *:nth-child(1) {
+	font-size: 1.5em,
+}
+.row > *:nth-child(2) {
+	text-align: center;
+}
+.row > *:nth-child(3) {
+	text-align: right;
+	padding-right: 3em;
+}
+.row > *:nth-child(3) > span {
+	padding: .1em 1em;
+	vertical-align: middle;
+	background: white;
+	color: #008cff;
+	border-radius: 5px;
+	cursor: pointer;
+	position: relative;
+}
+.row > *:nth-child(3) > span > span {
+	font-size: 2em;
+	position: absolute;
+	top: 50%;
+	left: -.8em;
+	transform: translate(0,-50%);
+	background: white;
+	border-radius: .5em;
+	border: 1px solid white;
+}
+.header > hr {
+	border-color: white;
+	margin: 0;
+	margin-top: .5em;
+}
+.noidung {
+	height: 100%;
+	margin: 0;
+}
+.noidung > div {
+	height: 100%;
+	position: relative;
+}
+.sidebar > span {
+	position: absolute;
+	top: 0;
+	left: 1.5em;
+	transform: translate(0,-50%);
+	background: #008cff;
+	color: white;
+	border-radius: 5px;
+	padding: .2em 1em;
+}
+.noidung > div:not([class~="sidebar"]) > span {
+	position: absolute;
+}
+.noidung > div:not([class~="sidebar"]) > span:nth-child(1) {
+	bottom: 100%;
+	left: 1.5em;
+}
+.noidung > div:not([class~="sidebar"]) > span:nth-child(1) > ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.option {
+	display: inline-block;
+	padding: .2em 1em;
+	border-radius: 5px 5px 0 0;
+	background: white;
+	color: #008cff;
+	border: 1px solid #008cff;
+	cursor: pointer;
+}
+.option:hover {
+	background: #008cff;
+	color: white;
+}
+.selected {
+	background: #008cff;
+	color: white;
+}
+.noidung > div:not([class~="sidebar"]) > span:nth-child(2) {
+	right: 1.5em;
+	bottom: 100%;
+	padding: .1em 1em;
+	margin: .2em 0;
+	border: 1px solid #008cff;
+	border-radius: 5px;
+}
+.noidung > div:not([class~="sidebar"]) > div {
+	display: none;
+	width: 100%;
+	height: 100%;
+	border: 1px solid gray;
+	border-radius: 5px;
+	overflow: auto;
+	border-top: .5em solid #008cff;
+}
+.chuyenxe {
+	width: 100%;
+	height: 100%;
+	border: 1px solid gray;
+	border-radius: 5px;
+	padding: 1.5em 0 .5em;
+}
+.chuyenxe > ul {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	padding-left: 1em;
+	list-style: none;
+	overflow: auto;
+}
+.chuyenxe > ul > li {
+	margin: .5em 0;
+	position: relative;
+	padding: .2em 1em;
+	background: #008cff;
+	color: white;
+	float: left;
+	clear: both;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.chuyenxe > ul > li > i {
+	position: absolute;
+	top: 50%;
+	right: -2em;
+	transform: translate(0,-50%);
+	font-size: 1.5em;
+}
+.show {
+	display: inline-block;
+}
+.datve > div {
+	height: 100%;
+}
+.searchroute {
+	max-height: 60%;
+	width: 100%;
+	padding: .5em 1em;
+	margin: .5em 0;
+	border: 1px solid #008cff;
+	border-radius: 10px;
+	overflow: auto;
+}
+.searchroute > span {
+	color: #008cff;
+	margin: .5em 0;
+	display: block;
+}
+.searchroute > span:nth-child(3) {
+	border: 1px solid #008cff;
+	display: inline-block;
+	padding: .2em;
+	font-size: 1.5em;
+}
+.selecttype {
+	border: 1px solid gray;
+	border-radius: 10px;
+	position: relative;
+	padding: .5em 0;
+}
+.selecttype > span {
+	padding: .1em .4em;
+	border-radius: 10px;
+	color: white;
+	background: #008cff;
+	position: absolute;
+	bottom: 100%;
+	left: .5em;
+	transform: translate(0,50%);
+}
+.searchresult {
+	height: 40%;
+	width: 100%;
+	padding: .5em 1em;
+	margin: .5em 0;
+	border: 1px solid #008cff;
+	border-radius: 10px;
+	overflow: auto;
+}
+.searchresult > div {
+	border: none;
+}
+.searchresult > div > ul {
+	padding-left: 3em;
+}
+.ttdatve {
+	padding: 1em 2em;
+	border: 1px solid #008cff;
+	margin: .5em 0;
+}
+.ttdatve > span:nth-child(1) {
+	color: #008cff;
+}
+.ttdatve > span:not(:nth-child(1)) {
+	display: inline-block;
+	padding: .2em 1em;
+	background: #008cff;
+	color: white;
+	margin: .5em 0;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.searchcustomer {
+	min-height: 60%;
+	padding: 1em 2em;
+	border: 1px solid #008cff;
+	margin: .5em 0;
+	border-radius: 10px;
+}
+.searchcustomer > span {
+	display: block;
+	text-align: center;
+	padding: .1em .4em;
+	background: #008cff;
+	color: white;
+	margin-bottom: 1em;
+	overflow: auto;
+}
+.searchcustomer > form > div {
+	position: relative;
+}
+.searchcustomer > form > div > span {
+	position: absolute;
+	top: 50%;
+	right: .1em;
+	font-size: 1.5em;
+	color: #008cff;
+	transform: translate(0,-50%) rotateY(180deg);
+	cursor: pointer;
+}
+.kqtimkh {
+	height: 300px;
+	padding: 1.5em 0 .5em;
+	margin-top: 1em;
+}
+.kqtimkh > ul {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	padding-left: 1em;
+	list-style: none;
+	overflow: auto;
+}
+.kqtimkh > ul > li {
+	margin: .5em 0;
+	position: relative;
+	padding: .2em 1em;
+	background: #008cff;
+	color: white;
+	float: left;
+	clear: both;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.kqtimkh > ul > li > span {
+	position: absolute;
+	top: 50%;
+	right: -5em;
+	transform: translate(0,-50%);
+	font-size: 1em;
+	padding: .5em;
+	border-radius: 50%;
+	box-shadow: 0 0 5px gray;
+	transition: .3s ease-in-out;
+}
+.kqtimkh > ul > li > span:hover {
+	transform: translate(0,-50%) rotateZ(45deg);
+}
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 2.5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+/* Modal Settings */
+#modaldatve .modal-content {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+#modaldatve .modal-title {
+	text-align: center;
+	color: #008cff;
+}
+#ttchuyenxe > div > div {
+	text-align: left;
+}
+#ttchuyenxe + span {
+	display: inline-block;
+	padding: .5em 2em;
+	color: #008cff;
+	background: white;
+	border: 1px solid #008cff;
+	border-radius: 5px;
+}
+#ttchuyenxe ~ label {
+	display: inline-block;
+	left: 50%;
+	transform: translate(-50%,0);
+}
+.sodoxe {
+	min-height: 40%;
+	overflow: auto; 
+}
+.sodoxe .row {
+}
+.sodoxe .row > div {
+	height: 3em;
+	border-radius: 5px;
+	padding: .5em;
+	text-align: center;
+}
+.sodoxe .row > div > div {
+	width: 100%;
+	height: 100%;
+	border: 1px solid grey;
+	border-radius: 5px;
+	color: green;
+	cursor: pointer;
+	transition: .3s ease-in-out;
+}
+.sodoxe .row > div > div:hover {
+	color: red;
+	transform: translate(0,-3px);
+	box-shadow: 0 3px 5px grey;
+}
+.sodoxe .row > div > div:active {
+	color: red;
+	transform: translate(0,0);
+	box-shadow: none;
+}
+.sodoxe ~ span {
+	position: relative;
+	display: inline-block;
+	padding: .5em 1em;
+	background: #008cff;
+	color: white;
+	border-radius: 5px;
+	left: 50%;
+	transform: translate(-50%,0);
+	transition: .3s ease-in-out;
+	cursor: pointer;
+}
+.sodoxe ~ span:hover {
+	transform: translate(-50%,0) translate(0,-3px);
+	box-shadow: 0 3px 5px grey;
+}
+.sodoxe ~ span:active {
+	transform: translate(-50%,0) translate(0,0);
+	box-shadow: none;
+}
+#modaldadat .modal-dialog {
+	width: 300px;
+}
+#modaldadat .modal-title {
+	text-align: center;
+	color: #008cff;
+}
+#modaldadat .modal-content {
+	width: 300px;
+	left: 50%;
+	transform: translate(-50%,0);
+	margin: 0;
+}
+#modaldadat .modal-body {
+	height: 300px;
+	padding: 1em 1.5em .5em;
+	margin-top: 1em;
+}
+#modaldadat .modal-body > ul {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	padding-left: 1em;
+	list-style: none;
+	overflow: auto;
+}
+#modaldadat .modal-body > ul > li {
+	margin: .5em 0;
+	position: relative;
+	padding: .2em 1em;
+	background: #008cff;
+	color: white;
+	float: left;
+	clear: both;
+	border-radius: 5px;
+	cursor: pointer;
+}
+#modaldadat .modal-body > ul > li > span {
+	position: absolute;
+	top: 50%;
+	right: -5em;
+	transform: translate(0,-50%);
+	font-size: 1em;
+	padding: .5em;
+	border-radius: 50%;
+	box-shadow: 0 0 5px gray;
+	transition: .3s ease-in-out;
+}
+#modaldadat .modal-body > ul > li > span:hover {
+	transform: translate(0,-50%) rotateZ(45deg);
+}
+#modaldadat .modal-footer {
+}
+#modaldadat .modal-footer > div {
+	text-align: left;
+	margin-bottom: 1em;
+	clear: both;
+	position: relative;
+}
+#modaldadat .modal-footer > div:nth-child(2) {
+	padding: 0 1em;
+}
+#modaldadat .modal-footer > div > div > span {
+	display: inline-block;
+	padding: .5em 1.5em;
+	background: white;
+	color: #008cff;
+	border: 1px solid #008cff;
+	border-radius: 5px;
+	transition: .3s ease-in-out;
+	cursor: pointer;
+}
+#modaldadat .modal-footer > div > div:nth-child(1) {
+	text-align: left;
+}
+#modaldadat .modal-footer > div > div:nth-child(2) {
+	text-align: right;
+}
+#modaldadat .modal-footer > div > div > span:hover {
+	background: #008cff;
+	color: white;
+	transform: translate(0,-3px);
+	box-shadow: 0 3px 5px grey;
+}
+#modaldadat .modal-footer > div > div > span:active {
+	transform: translate(0,0);
+	box-shadow: none;
+}

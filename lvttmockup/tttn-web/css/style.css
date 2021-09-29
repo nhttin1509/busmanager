@@ -1,0 +1,759 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+a{
+	text-decoration: none;
+}
+/*header*/
+.header{
+	min-height: 40px;
+	width: 100%;
+	background: #002835;
+	padding-right: 3em;
+	position: relative;
+}
+.header button{
+	background: #002835;
+	color: #FFF;
+	border: none;
+	min-height: 30px;
+	border: 1px solid #004963;
+	margin-top: 2.5px;
+	transition: all 1s ease-in-out;
+}
+.header img{
+	position: absolute;
+	margin-left: 5em;
+}
+.header button:hover{
+	background: #FFF;
+	color: #CCC;
+}
+.header ul{
+	list-style-type: none;
+	margin: 0;
+}
+.header ul li{
+	float: right;
+	margin-left: 0.5em;
+}
+/*menu*/
+.menu{
+	width: 100%;
+	min-height: 50px;
+	background: rgb(0,64,87);
+}
+.menu ul{
+	list-style-type: none;
+	line-height: 50px;
+	margin: 0px;
+	margin-left: 5em;
+}
+.menu ul li{
+	float: left;
+	margin-right: 3em;
+}
+.menu span{
+	color: #FFF;
+	font-size: 16px;
+	font-weight: 500;
+	margin-left: 0.5em;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #FFF;
+	transition: all 1.8s ease-in-out;
+}
+.menu i{
+	font-size: 18px;
+    padding: 0;
+    color: #FFF;
+    transition: all 1s ease-in-out;
+}
+.menu a:hover{
+	text-decoration: none;
+}
+.menu a:hover i{
+	color: #F3AD45;
+}
+.menu a:hover span{
+	color: #F3AD45;
+	border-bottom: 1px solid #F3AD45;
+}
+.menu i{
+	animation: hieuungvaotrang 0.5s ease-in;
+}
+@keyframes hieuungvaotrang{
+				0%{transform: scale(0);}
+				10%{transform: scale(0.1);}
+				20%{transform: scale(0.2);}
+				30%{transform: scale(0.3);}
+				40%{transform: scale(0.4);}
+				50%{transform: scale(0.5);}
+				60%{transform: scale(0.6);}
+				70%{transform: scale(0.7);}
+				80%{transform: scale(0.8);}
+				90%{transform: scale(0.9);}
+				100%{transform: scale(1);}
+			}
+/*main*/
+.main{
+	width: 100%;
+	margin: auto;
+	position: relative;
+}
+/*left*/
+.left{
+	width: 100%;
+	min-height: 400px;
+}
+/*slide*/
+.mySlides {display: none}
+.slideshow-container{
+	width: 100%;
+	height: 400px;
+	position: relative;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade1 {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+/*ket thuc slide*/
+/*right*/
+.right{
+	width: 25%;
+	min-height: 300px;
+	position: absolute;
+	top: 10px;
+	right: 40px;
+	border-radius: 0.5em;
+	background: #004963;
+	padding-bottom: 10px;
+}
+
+.timchuyendi{
+	width: 100%;
+	margin: auto;
+	border: 1px solid #f57812;
+	text-align: center;
+	border-radius: 0.5em 0.5em 0  0;
+	background: #f57812;
+}
+.timchuyendi h4{
+	color: #FFF;
+}
+.diadiem{
+	width: 90%;
+	margin: auto;
+	margin-top: 2em;
+}
+.the{
+	position: relative;
+}
+.diadiem i{
+	position: absolute;
+	top: 8px;
+	margin-left: 10px;
+	color: #f57812;
+}
+.diadiem select{
+	width: 300px;
+	height: 30px;
+	padding-left: 2em;
+	cursor: pointer;
+	color: #004963;
+	font-weight: bold;
+	border: none;
+	box-shadow: 0 3px #F3AD45; 
+}
+.ngaydi{
+	width: 90%;
+	margin: auto;
+	margin-top: 2em;
+}
+.right label{
+	color: #FFF;
+	font-weight: bold;
+}
+.ngaydi #datepicker{
+	width:300px; 
+}
+.ngaydi #datepicker > span:hover{
+	cursor: pointer;
+}
+.tim{
+	margin-top: 3em;
+	text-align: center;
+	position: relative;
+}
+.tim button{
+	width: 150px;
+	background: #F3AD45;
+	transition: all 1.8s ease-in-out;
+}
+.tim:hover button{
+	background: #f57812;
+}
+.tim i{
+	position: absolute;
+	color: #FFF;
+	padding-top: 8px;
+	padding-left: 4px;
+	background:#f57812;
+	height: 100%;
+	width: 33px;
+}
+.tim a{
+	color: #FFF;
+}
+.tim a:hover{
+	color: #FFF;
+	text-decoration: none;
+}
+/*tin tuc*/
+.tintuc{
+	width: 100%;
+	min-height: 450px;
+	margin-top: 1em;
+	position: relative;
+}
+.tentintuc{
+	background-color: #f57812;
+	border-radius: 0 30px 0 30px;
+	width: 30%;
+	text-align: center;
+	height: 3.5em;
+	color: #FFF;
+	position: absolute;
+	top: 0.5em;
+}
+.tentintuc > h2{
+	position: absolute;
+	top: -25%;
+	left: 15%;
+}
+.tintuc ul{
+	list-style-type: none;
+	padding-top: 5em;
+	margin-left: 3%;
+}
+.tintuc li{
+	width: 30%;
+	min-height: 300px;
+	margin-right: 3%;
+	float: left;
+	text-align: center;
+	background: #FFF;
+	border-radius: 0.5em;
+	background: rgb(245,245,245);
+	padding-bottom: 3px;
+}
+.tintuc li img{
+	width: 100%;
+	height: 70%;
+	border-radius: 50%;
+}
+.tintuc li img:hover{
+	cursor: pointer;
+}
+.tintuc a:hover{
+	cursor: pointer;
+}
+.tintucbutton{
+	text-align: center;
+}
+.tintucbutton button{
+	margin-top: 3em;
+	width: 200px;
+	border: 0.5px;
+	height: 30px;
+}
+.tintucbutton button:hover{
+	background: #F3AD45;
+}
+.tintucbutton button:hover a{
+	text-decoration: none;
+	color: #FFF;
+}
+/*footer*/
+.footer{
+	margin-top: 1em;
+	background: rgb(0,64,87);
+	min-height: 170px;
+
+}
+.footer ul{
+ 	list-style-type: none; 
+ 	padding-top: 2em;
+ 	margin: 0;
+}
+.footer ul li{
+	width: 49%;
+	float: left;
+	text-align: center;
+	color: #FFF;
+}
+/*datve*/
+.maindatve{
+	width: 100%;
+	min-height: 400px;
+}
+.maindatve ul{
+	width: 100%;
+	list-style-type: none;
+	margin-top: 2em;
+	border-radius: 1em;
+	height: 300px;
+}
+.maindatve ul li{
+	width: 33%;
+	float: left;
+	text-align: center;
+	color: #004963;
+	font-weight: 500;
+	font-size: 18px;
+	margin-top: 1em;
+}
+.diadiemdatve{
+	width: 100%;
+	margin: auto;
+	margin-top: 1em;
+}
+.diaiemdatve .the{
+	position: relative;
+}
+.diadiemdatve i{
+	position: absolute;
+	top: 8px;
+	margin-left: 5px;
+	color:#f57812; 
+}
+.diadiemdatve select{
+	width: 300px;
+	height: 30px;
+	padding-left: 2em;
+	cursor: pointer;
+	color: #004963;
+	border: none;
+	box-shadow: 0 3px #F3AD45; 
+}
+.timchuyendidatve{
+	width: 40%;
+	margin: auto;
+	border-radius: 5% 30% 5% 30%;
+	border: 1px solid #CCC;
+	text-align: center;
+	margin-top: 1em;
+	background:#f57812; 
+	}
+.timchuyendidatve h3{
+	color: #FFF;
+	font-weight: bold;
+}
+.ngaydidatve{
+	width: 100%;
+	margin: auto;
+	margin-top: 1em;
+	margin-left: 2em;
+}
+.ngaydidatve #datepicker{
+	width:300px; 
+}
+.ngaydidatve #datepicker > span:hover{
+	cursor: pointer;
+}
+.timdatve{
+	margin-top: 3em;
+	text-align: center;
+}
+.timdatve button{
+	width: 150px;
+}
+.chonloaixe{
+	margin-top: 2em;
+	padding-top: 1em;
+	border: 1px solid #F3AD45;
+	background: #FFF;
+	font-weight: bold;
+	width: 75%;
+	margin-left: 3em;
+	border-radius: 1em;
+}
+.chonloaixe form{
+	text-align: left;
+	margin-left: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.chonloaixe input:hover{
+	cursor: pointer;
+}
+.ngaydidatve a{
+	color: #FFF;
+}
+.ngaydidatve a:hover{
+	color: #FFF;
+	text-decoration: none;
+}
+/*chuyenxe*/
+.chuyenxemain{
+	width: 100%;
+	margin-top: 1em;
+	min-height: 300px;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+.chuyenxemain table{
+	width: 90%;
+	margin: auto;
+	text-align: center;
+	font-family: arial, sans-serif;
+    border-collapse: collapse;
+}
+.chuyenxemain th{
+	border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+    position: relative;
+}
+.chuyenxemain td{
+	border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+    position: relative;
+}
+.chuyenxemain tr{
+	height: 40px;
+}
+.chuyenxemain tr:nth-child(even) {
+    background-color: #dddddd;
+}
+/* .chuyenxechon{
+	width: 40%;
+	color: #FFF;
+	text-align: center;
+	padding: 0.5em;
+	margin:auto;
+	border-radius: 5% 30% 5% 30%;
+	margin-bottom: 1em;
+	background: #f57812;
+} */
+.chuyenxetim{
+	text-align: center;
+	position: relative;
+}
+.chuyenxetim button{
+	width: 200px;
+	background:#e0ab39;
+}
+.chuyenxetim i{
+	position: absolute;
+	color: #FFF;
+	padding-top: 8px;
+	padding-left: 4px;
+	background:#e09a39;
+	height: 100%;
+	width: 33px;
+}
+.chuyenxetim a{
+	color: #FFF;
+}
+.chuyenxetim a:hover{
+	color: #FFF;
+	text-decoration: none;
+}
+/*chonvexe*/
+.chonvemain{
+	margin-top: 2em;
+	width: 90%;
+	margin: auto;
+	min-height: 900px;
+	margin-top: 1em;
+}
+.chonveleft{
+	width: 40%;
+	min-height: 300px;
+	border-radius: 0.5em;
+	box-shadow: 0 0 2em #CCC;
+	float: left;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+}
+.chonveleft h3{
+	text-align: center;
+	color: #000;
+}
+.chonveleft button{
+	width: 200px;
+}
+.chonvemain i{
+	color: #F3AD45;
+}
+.chonvemain span{
+	color: #F3AD45;
+}
+.chonveright{
+	width: 58%;
+	min-height: 500px;
+	border-radius: 0.5em;
+	box-shadow: 0 0 2em #CCC;
+	float: left;
+	margin-left: 2%;
+}
+.chonveright h3{
+	text-align: center;
+	color: #000;
+}
+.chonveright ul{
+	list-style-type: none;
+	margin-left: 1em;
+	margin-top: 2em;
+}
+.chonveright li{
+	float: left;
+	width: 30%;
+}
+.loaigheban{
+    background-color: #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+.loaighetrong{
+    background-color: blue;
+    padding: 15px;
+    border-radius: 5px;
+}
+.loaighechon{
+    background-color: green;
+    padding: 15px;
+    border-radius: 5px;
+}
+/*ghe*/
+.chonveright table{
+	width: 80%;
+	margin: auto;
+	border-spacing: 0.5em;
+	border-collapse: separate;
+	border-radius: 1em;
+	box-shadow: 0 0 2em #CCC;
+	font-weight: bold;
+}
+.ghe{
+	width: 20%;
+	height: 5em;
+	background: #DDD;
+	border: none;
+	border-radius: 1em;
+	cursor: pointer;
+}
+.ghetaixe{
+	width: 20%;
+	height: 5em;
+	background:#F3AD45;
+	border: none;
+	border-radius: 1em;
+}
+.ghetrong{
+	width: 20%;
+	height: 5em;
+	border: none;
+}
+.ghecontrong{
+	width: 20%;
+	height: 5em;
+	background: blue;
+	border: none;
+	border-radius: 1em;
+	  cursor: pointer;
+}
+.ghedangchon{
+	width: 20%;
+	height: 5em;
+	background: green;
+	border: none;
+	border-radius: 1em;
+	  cursor: pointer;
+}
+.content{
+	margin-top: 45px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+/*tintuc*/
+.maintintuc{
+	width: 90%;
+	margin: auto;
+	border-radius: 1em;
+	box-shadow: 0 0 2em #CCC;
+	margin-top: 1em;
+	position: relative;
+}
+.maintintuc ul{
+	list-style-type: none;
+}
+.trangtintuc{
+	width: 100%;
+	min-height: 770px;
+	margin-top: 1em;
+	border-radius: 1em;
+	position: relative;
+	background: rgb(245,245,245);
+}
+.trangtentintuc{
+	background-color: #F3AD45;
+	border-radius: 30px;
+	width: 30%;
+	text-align: center;
+	height: 3.5em;
+	color: #FFF;
+	position: absolute;
+	top: 0.5em;
+}
+.trangtentintuc > h2{
+	position: absolute;
+	top: -25%;
+	left: 15%;
+}
+.trangtintuc ul{
+	list-style-type: none;
+	padding-top: 5em;
+	margin-left: 5%;
+}
+.trangtintuc li{
+	width: 30%;
+	min-height: 300px;
+	margin-right: 2%;
+	margin-top: 1em;
+	float: left;
+	text-align: center;
+	background: #FFF;
+	border-radius: 0.5em;
+}
+.trangtintuc li img{
+	width: 100%;
+	height: 70%;
+}
+.trangtintuc li img:hover{
+	cursor: pointer;
+}
+.trangtintuc a:hover{
+	cursor: pointer;
+}
+.trangtintucbutton{
+	text-align: center;
+}
+.trangtintucbutton button{
+	margin-top: 3em;
+	width: 200px;
+	border: 0.5px;
+	height: 30px;
+}
+.trangtintucbutton button:hover{
+	background: #F3AD45;
+}
+.trangtintucbutton button:hover a{
+	text-decoration: none;
+	color: #FFF;
+}
+/*gioithieu*/
+.maingioithieu{
+	width: 90%;
+	margin: auto;
+	min-height: 500px;
+	border-radius: 1em;
+	box-shadow: 0 0 2em #CCC;
+	margin-top: 1em;
+	position: relative;
+	padding: 1em;
+}
+/*buoc*/
+.buoc{
+	width: 100%;
+	padding-top: 3em;
+}
+.buoc ul{
+	list-style-type: none;
+	width: 80%;
+	margin: auto;
+}
+.buoc ul li{
+	width: 30%;
+	float: left;
+	height: 50px;
+	background: #f4f4f4;
+	margin-right: 3%;
+	text-align: center;
+	line-height: 50px;
+	font-size: 18px;
+	border-radius: 25% 50% 50% 25%;
+	margin-bottom: 3em;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}

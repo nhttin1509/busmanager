@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Trang chủ</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet prefetch" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+
+</head>
+<body>
+	<div class="header">
+		<img src="images/logo.png" height="40">
+		<ul>
+			<li><button type="button" class="btn btn-primary">Đăng ký</button></li>
+			<li><button type="button" class="btn btn-primary">Đăng nhập</button></li>
+		</ul>
+	</div>
+	<div class="menu">
+		<ul>
+			<li><a href="index.html"><i class="glyphicon glyphicon-home" aria-hidden="true"></i>
+				<span>TRANG CHỦ</span>
+				</a>
+			</li>
+			<li>
+				<a href="datve.html">
+					<i class="glyphicon glyphicon-list-alt" aria-hidden="true"></i>
+					<span>ĐẶT VÉ</span>
+				</a>
+			</li>
+			<li>
+				<a href="tintuc.html">
+					<i class="glyphicon glyphicon-text-size" aria-hidden="true"></i>
+					<span>TIN TỨC</span>
+				</a>
+			</li>
+			<li>
+				<a href="gioithieu.html">
+					<i class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></i>
+					<span>GIỚI THIỆU</span>
+				</a>
+			</li>
+			<li>
+				<a href="lienhe.html">
+					<i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+					<span>LIÊN HỆ</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div style="clear: all;"></div>
+	<div class="buoc">
+			<ul>
+				<li>Tìm Chuyến</li>
+				<li>Chọn Vé</li>
+				<li style="background: #f57812; color: #FFF;" class="stay">Chi Tiếc vé</li>
+			</ul>	
+		</div>
+	<div class="chonvemain">
+		<div class="chonveleft">
+			<h3>Thông tin vé</h3>
+				<p><i class="fa fa-bus"></i> Nơi Khởi Hành: <a>Quảng Ngãi</a></p><br>
+				<p><i class="fa fa-bus"></i> Nơi đến: <a>Hồ Chí Minh</a></p> <br>
+				<p><span class="glyphicon glyphicon-time"></span> Giờ khởi hành: 1:30 16-9</p><br>
+				<p><span class="glyphicon glyphicon-bed"></span> Loại xe: Giường nằm</p><br>
+				<p><i class="fa fa-balance-scale"></i> Giá vé : 200.000đ</p><br>
+				<p><i class="fa fa-address-card-o"></i> Vé đang chọn: D1</p><br>
+				<button type="button" class="btn btn-success">Giữ chổ</button>
+				<button type="button" class="btn btn-success">Thanh toán</button>
+		</div>
+		<div class="chonveright">
+			<h3>Sơ đồ xe</h3>
+			<ul>
+				<li><i class="loaigheban"></i> &nbsp;Ghế đã bán</li>
+				<li><i class="loaighetrong"></i> &nbsp;Ghế còn trống</li>
+				<li><i class="loaighechon"></i> &nbsp;Ghế đang chọn</li>
+			</ul>
+			<br>
+			<table style="margin-top: 2em;">
+				<tr>
+					<td class="ghetaixe" title="Ghế tài xế"></td>
+					<td class="ghetrong"></td>
+					<td class="ghetrong"></td>
+					<td class="ghetrong"></td>
+					<td class="ghetrong"></td>
+				</tr>
+				<tr>
+					<td class="ghe" title="khách hàng đã mua">
+						<div class="content">A1</div>
+					</td>
+					<td class="ghetrong"></td>
+					<td class="ghe" title="khách hàng đã mua">
+						<div class="content">B1</div>
+					</td>
+					<td class="ghetrong"></td>
+					<td class="ghecontrong">
+						<div class="content">C1</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="ghe" title="khách hàng đã mua">
+						<div class="content">A2</div>
+					</td>
+					<td class="ghetrong"></td>
+					<td class="ghecontrong">
+						<div class="content">B2</div>
+					</td>
+					<td class="ghetrong"></td>
+					<td class="ghe" title="khách hàng đã mua">
+						<div class="content">C2</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="ghe" title="khách hàng đã mua">
+						<div class="content">A3</div>
+					</td>
+					<td class="ghetrong"></td>
+					<td class="ghecontrong">
+						<div class="content">B3</div>
+					</td>
+					<td class="ghetrong"></td>
+					<td class="ghe" title="khách hàng đã mua">
+						<div class="content">C3</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="ghe" title="khách hàng đã mua">
+						<div class="content">A4</div>
+					</td>
+					<td class="ghetrong"></td>
+					<td class="ghe" title="khách hàng đã mua">
+						<div class="content">B4</div>
+					</td>
+					<td class="ghetrong"></td>
+					<td class="ghe" title="khách hàng đã mua">
+						<div class="content">C4</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="ghe" title="khách hàng đã mua"><div class="content">A5</div></td>
+					<td class="ghetrong"></td>
+					<td class="ghe" title="khách hàng đã mua"><div class="content">B5</div></td>
+					<td class="ghetrong"></td>
+					<td class="ghe" title="khách hàng đã mua"><div class="content">C5</div></td>
+				</tr>
+				<tr>
+					<td class="ghe" title="khách hàng đã mua"><div class="content">A6</div></td>
+					<td class="ghetrong"></td>
+					<td class="ghe" title="khách hàng đã mua"><div class="content">B6</div></td>
+					<td class="ghetrong"></td>
+					<td class="ghe" title="khách hàng đã mua"><div class="content">C6</div></td>
+				</tr>
+				<tr>
+					<td class="ghedangchon"><div class="content">D1</div></td>
+					<td class="ghecontrong"><div class="content">D2</div></td>
+					<td class="ghecontrong"><div class="content">D3</div></td>
+					<td class="ghecontrong"><div class="content">D4</div></td>
+					<td class="ghe" title="khách hàng đã mua"><div class="content">D5</div></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div style="clear: all;"></div>
+	<div class="main">
+		<div class="footer">
+			<ul>
+				<li>
+					<h3>Liên Hệ</h3>
+					<i class="fa fa-home" aria-hidden="true"></i>
+					<i>Đại Học Bách Khoa HCM</i><br>
+					<i class="fa fa-phone" aria-hidden="true"></i>
+					<i>0989671651</i><br>
+					<i class="fa fa-envelope-o" aria-hidden="true"></i>
+					<i>nhan51202526@gmail.com</i>
+				</li>
+				<li>
+					<h4> &copy; Bảng Quyền Thuộc Về Đại Học Bách Khoa HCM </h4>
+					<h4>Tất cả vì khách hàng - Thiết Kế bới Nhóm 30</h4>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
